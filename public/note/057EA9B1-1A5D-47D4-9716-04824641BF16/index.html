@@ -1,7 +1,12 @@
-<!DOCTYPE html>
-<html>
-  <head><title>Test Notu</title></head>
-  <body>
-    <h1>Bu bir test notudur</h1>
-  </body>
-</html>
+<script>
+  // Uygulama URL'sini oluştur
+  const appUrl = "not://note/057EA9B1-1A5D-47D4-9716-04824641BF16";
+
+  // Kullanıcıyı uygulamaya yönlendir
+  window.location.href = appUrl;
+
+  // 3 saniye sonra HTML sayfasına yönlendirme
+  setTimeout(() => {
+    window.location.href = "https://saklory-vercel.vercel.app/note/057EA9B1-1A5D-47D4-9716-04824641BF16";
+  }, 3000);
+</script>
