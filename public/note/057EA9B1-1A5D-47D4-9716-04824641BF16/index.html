@@ -1,12 +1,25 @@
-<script>
-  // Uygulama URL'sini oluştur
-  const appUrl = "not://note/057EA9B1-1A5D-47D4-9716-04824641BF16";
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Not Yönlendirme</title>
+</head>
+<body>
+  <h1>Not açılıyor...</h1>
+  <p>Bir dakika içinde uygulama açılmazsa bu sayfada kalacaksınız.</p>
 
-  // Kullanıcıyı uygulamaya yönlendir
-  window.location.href = appUrl;
+  <script>
+    // Uygulama şemanla eşleşen URL (örneğin AppDelegate tarafında da buna uygun olmalı)
+    const appUrl = "not://note/057EA9B1-1A5D-47D4-9716-04824641BF16";
 
-  // 3 saniye sonra HTML sayfasına yönlendirme
-  setTimeout(() => {
-    window.location.href = "https://saklory-vercel.vercel.app/note/057EA9B1-1A5D-47D4-9716-04824641BF16";
-  }, 3000);
-</script>
+    // Uygulamayı açmayı dene
+    window.location.href = appUrl;
+
+    // Eğer 3 saniye içinde uygulama açılmazsa, linkte kal (sayfada kalmaya devam eder)
+    setTimeout(() => {
+      console.log("Uygulama açılamadı, web sayfasında kalındı.");
+    }, 3000);
+  </script>
+</body>
+</html>
